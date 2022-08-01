@@ -6,6 +6,8 @@ services:
       context: .
     ports:
       - 3000:3000
+    networks:
+      - web
     command: node app.js
     labels:
       - traefik.enable=true
@@ -14,3 +16,8 @@ services:
       - traefik.http.services.api.loadbalancer.server.port=3000
       - traefik.http.routers.api.tls.certresolver=staging
       - traefik.docker.network=traefik_default
+
+networks:
+  web:
+    external:
+      name: traefik_default
