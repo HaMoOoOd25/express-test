@@ -17,7 +17,3 @@ services:
       - traefik.http.routers.api.tls.certresolver=staging
       - traefik.docker.network=traefik_default
 
-networks:
-  web:
-    external:
-      name: traefik_default
