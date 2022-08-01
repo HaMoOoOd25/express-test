@@ -11,3 +11,4 @@ services:
       - traefik.enable=true
       - traefik.http.routers.api.entrypoints=http
       - traefik.http.routers.api.rule=Host(` test.hamood.dev `)
+      - traefik.http.services.api.loadbalancer.server.port=3000
