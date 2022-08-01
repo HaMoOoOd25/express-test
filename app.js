@@ -8,6 +8,6 @@ app.get('/', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
+app.listen(3000, '0.0.0.0', () => {
     console.log('listening on 3000')
 })
