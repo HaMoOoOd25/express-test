@@ -10,3 +10,4 @@ services:
     labels:
       - traefik.enable=true
       - traefik.http.routers.api.entrypoints=http
+      - traefik.http.routers.api.rule=Host(`test.hamood.dev`)
