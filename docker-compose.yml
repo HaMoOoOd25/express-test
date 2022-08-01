@@ -13,3 +13,4 @@ services:
       - traefik.http.routers.api.rule=Host(`test.hamood.dev`)
       - traefik.http.services.api.loadbalancer.server.port=3000
       - traefik.http.routers.api.tls.certresolver=staging
+      - traefik.docker.network=traefik_default
