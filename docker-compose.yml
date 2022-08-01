@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  myapi:
+    build:
+      context: .
+    ports:
+      - 3001:3001
+    command: node app.js
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.api.entrypoints=http
